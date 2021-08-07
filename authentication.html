@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive Navigation Menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+            *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: 'Poppins', sans-serif;
+            }
+            .main{
+              width: 400px;
+              height: 250px;
+              margin-top: 200px;
+              margin-left: auto;
+              margin-right: auto;
+              padding:20px 5px 0px 5px;
+              text-align: center;
+              background-color: white;
+              border-radius: 20px;
+            }
+            div label h5{
+              color: black;
+              font-size: 36px;
+              font-weight: 700;
+              border-radius: 10px;
+            }
+            table{
+              overflow-x: auto;
+              white-space: nowrap;
+              width: 200px;
+              height: 370px;
+              margin: auto;
+              color: #212529;
+              text-align: center;
+            }
+            .form{
+              display: block;
+              width: 40%;
+              margin-top: 20px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: .375rem .75rem;
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5;
+              color: #212529;
+              background-color: rgb(253, 253, 253);
+              background-clip: padding-box;
+              border: 2px solid #bdbdbd;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              border-radius: 5px;
+            }
+            .form_alart{
+              display: block;
+              width: 40%;
+              margin-top: 20px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: .375rem .75rem;
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5;
+              color: #212529;
+              background-color: rgb(253, 234, 234);
+              background-clip: padding-box;
+              border: 2px solid #ff3c3c;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              border-radius: 5px;
+            }
+            th{
+              font-size: 20px;
+              font-weight: 600;
+              text-align: left;
+              border-bottom: 1px solid #ddd;
+              width: 50px;
+            }
+            td{
+              font-size: 20px;
+              font-weight: 600;
+              border-bottom: 1px solid #ddd;
+            }
+            #check{
+              display: inline;
+              width: 100px;
+              margin:15px 5px 0 5px;
+              padding: .375rem .75rem;
+              font-size: 1rem;
+              font-weight: 500;
+              line-height: 1.5;
+              color: #212529;
+              background-color: #e9e9e9;
+              background-clip: padding-box;
+              border: 2px solid #dfdfdf;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              border-radius: 10px;
+              transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
+            }
+            #check:hover{
+              background-color: #c9c9c9;
+              border: 2px solid #c9c9c9;
+            }
+            .nothing{
+              display: none;
+            }
+            .alarm{
+              color: rgb(255, 0, 0);
+              margin-left: 120px;
+              font-size: 16px;
+              font-weight: 500;
+              text-align: left;
+            }
+            @media (max-width: 430px){
+              .main{
+                width: 330px;
+              }
+              table{
+                width: 280px;
+              }
+              .alarm{
+                margin-left: 100px;
+              }
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: #212529;">
+        <div class="main">
+            <label><h5>帳號認證</h5></label>
+            <form>
+                <div>
+                    <input id="authentication" class="form" placeholder="請輸入認證碼">
+                    <div id="auth_alarm" class="nothing">請輸入認證碼</div>
+                </div>
+            </form>
+            <button id="check" type="button"><b>認證</b></button>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script  language="JavaScript" type="text/javascript" src="http://140.125.217.135:1880/web/authentication/json"></script>
+    </body>
+</html>

@@ -41,11 +41,11 @@ function check()
             window.currrent_h=Tdate.getHours();
             if(window.currrent_h>=8 && window.currrent_h<=17)
             {
-                if(window.currrent_h<12)
+                if(window.currrent_h<12 && window.currrent_h>=8)
                 {
                     var j = window.currrent_h-8;
                 }
-                else
+                if(window.currrent_h>12 && window.currrent_h<=17)
                 {
                     var j = window.currrent_h-13+4;
                 }
@@ -58,7 +58,6 @@ function check()
                 var date_index = new Date(window.inf[i].Time);
                 if( date_index.getFullYear() == window.Tyear)
                 {
-                    console.log(1);
                     if( date_index.getMonth() == window.Tmonth)
                     {
                         if( date_index.getDate() == window.Tday)
@@ -83,7 +82,7 @@ function check()
             {
                 switch_off();
                 window.alert("目前非您的借閱時間");
-                //window.location.href="http://127.0.0.1:1880/web/lending";
+                window.location.href="http://127.0.0.1:1880/web/home";
             }
         }
     )

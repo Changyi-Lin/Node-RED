@@ -33,7 +33,7 @@ $(function()
             {
                 if(password==check)
                 {
-                    var API = "http://140.125.217.135:1880/register";
+                    var API = "http://127.0.0.1:1880/register";
                     $.post
                     (
                     API,
@@ -61,12 +61,16 @@ $(function()
                         {
                             const access=res.Access;
                             alert("註冊成功，認證碼:"+access+"\n請去信箱認證。");
-                            window.location.href="http://140.125.217.135:1880/web/signin";
+                            window.location.href="http://127.0.0.1:1880/web/signin";
                         }
                     }
                     );
                 }
-                else alert("確認密碼與密碼不合!");
+                else
+                {
+                    alert("確認密碼與密碼不合!");
+                }
+                
             }            
         })
     }

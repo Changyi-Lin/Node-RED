@@ -119,6 +119,36 @@
         div table tbody tr td a:hover{
           color:rgb(76, 42, 138);
         }
+        .ToSwitch{
+          width: 50%;
+          margin:10px 0px 0px 5%;
+        }
+        div #ToSwitchButton{
+          margin-top: 20px;
+          display: inline-block;
+          width: 180px;
+          height: 100px;
+          line-height: 1.5;
+          color: #212529;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: middle;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+          background-color: #ff854d;
+          border: 2px solid #ff854d;
+          padding: .375rem .75rem;
+          font-size: 1.5rem;
+          border-radius: 10px;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          font-weight: 400;
+        }
+        div #ToSwitchButton:hover{
+          background-color: #e46428;
+          border: 2px solid #e46428;
+        }
         @media (max-width:1000px) {
             #user_name{
                 color: white;
@@ -219,10 +249,10 @@
             </label>
             <ul>
                 <label id="user_name">林昌毅</label>
-                <li><a  class="active" href="http://140.125.217.135:1880/web/home">首頁</a></li>
-                <li><a href="http://140.125.217.135:1880/web/lend">預約教室</a></li>
-                <li><a href="http://140.125.217.135:1880/web/lending">預約中</a></li>
-                <li><a href="http://140.125.217.135:1880/web/information">個人資料</a></li>
+                <li><a  class="active" href="http://127.0.0.1:1880/web/home">首頁</a></li>
+                <li><a href="http://127.0.0.1:1880/web/lend">預約教室</a></li>
+                <li><a href="http://127.0.0.1:1880/web/lending">預約中</a></li>
+                <li><a href="http://127.0.0.1:1880/web/information">個人資料</a></li>
                 <li><label id="signout">登出</label></li>
             </ul>
         </nav>
@@ -254,9 +284,12 @@
             </tbody>
         </table>
         </div>
+        <div class="ToSwitch">
+          <button id="ToSwitchButton" type="button">前往控制介面</button>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-        <script  language="JavaScript" type="text/javascript" src="http://140.125.217.135:1880/web/check_uid"></script>
-        <script  language="JavaScript" type="text/javascript" src="http://140.125.217.135:1880/web/home/json"></script>
+        <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/check_uid"></script>
+        <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/home/js"></script>
     </body>
 </html>

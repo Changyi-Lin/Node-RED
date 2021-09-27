@@ -28,7 +28,7 @@ $(document).ready(function()
             }
             if(check==1)
             {
-                var API = "http://140.125.217.135:1880/signin";
+                var API = "http://127.0.0.1:1880/signin";
                 $.post
                 (
                     API,
@@ -42,12 +42,15 @@ $(document).ready(function()
                         const status=res.Status;
                         const access=res.Access;
                         console.log(info);
-                        if (info == 0) window.alert("帳號或密碼錯誤。");
+                        if (info == 0)
+                        {
+                            window.alert("帳號或密碼錯誤。");
+                        }
                         else
                         {
                             if(status == 1)
                             {
-                                var API = "http://140.125.217.135:1880/web/signin/add_uid";
+                                var API = "http://127.0.0.1:1880/web/signin/add_uid";
                                 $.post
                                     (
                                         API,
@@ -55,9 +58,12 @@ $(document).ready(function()
                                           Std_id:std_id  
                                         }
                                     );
-                                window.location.href="http://140.125.217.135:1880/web/home";
+                                window.location.href="http://127.0.0.1:1880/web/home";
                             }
-                            else window.alert("帳號尚未認證，請去信箱認證\n認證碼:"+access);
+                            else
+                            {
+                                window.alert("帳號尚未認證，請去信箱認證\n認證碼:"+access);
+                            }
                         }
                     }
                 );

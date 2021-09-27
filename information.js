@@ -1,7 +1,7 @@
 $(document).ready(function()
     {
         //初始化
-        var API="http://140.125.217.135:1880/information"
+        var API="http://127.0.0.1:1880/information"
         $.post
         (
             API,
@@ -25,21 +25,21 @@ $(document).ready(function()
         //修改資料
         $("#modify").click(function()
         {   
-            var API = "http://140.125.217.135:1880/web/check_uid"
+            var API = "http://127.0.0.1:1880/web/check_uid"
             $.get
             (
                 API
             );
-            window.location.href="http://140.125.217.135:1880/web/information/modify";
+            window.location.href="http://127.0.0.1:1880/web/information/modify";
         })
 
         //登出
         $("#signout").click(function()
         {   
-            var API = "http://140.125.217.135:1880/delete_uid";
+            var API = "http://127.0.0.1:1880/delete_uid";
             $.get
                 (API);
-            window.location.href="http://140.125.217.135:1880/web/signin"
+            window.location.href="http://127.0.0.1:1880/web/signin"
         })
     }
 )

@@ -13,7 +13,7 @@ $(document).ready(function()
         { 
             today_month='0'+today_month; 
         } 
-        window.today = today_year+"-"+today_month+"-"+today_day;
+        window.today = today_year+"-"+today_month+"-"+(today_day-2);
         document.getElementById("selectdate").setAttribute("min", window.today); 
         //初始化
         window.date_checked=0;
@@ -21,17 +21,17 @@ $(document).ready(function()
         //登出
         $("#signout").click(function()
         {   
-            var API = "http://140.125.217.135:1880/delete_uid";
+            var API = "http://127.0.0.1:1880/delete_uid";
             $.get
                 (API);
-            window.location.href="http://140.125.217.135:1880/web/signin"
+            window.location.href="http://127.0.0.1:1880/web/signin"
         })
 
         //確認時間
         $("#selectdate").change(function()
         {
             //檢查逾時
-            var API = "http://140.125.217.135:1880/web/check_uid";
+            var API = "http://127.0.0.1:1880/web/check_uid";
             $.get
             (
                 API
@@ -51,7 +51,7 @@ $(document).ready(function()
                 $(id_list[i]).attr("disabled",false);
             }
             var Time = document.getElementById("selectdate").value;
-            var API="http://140.125.217.135:1880/check_time";
+            var API="http://127.0.0.1:1880/check_time";
             window.time=Time;
             $.post
                 (
@@ -91,7 +91,7 @@ $(document).ready(function()
         $("#btnset").click(function()
         {
             //檢查逾時
-            var API = "http://140.125.217.135:1880/web/check_uid"
+            var API = "http://127.0.0.1:1880/web/check_uid"
             $.get
             (
                 API
@@ -112,7 +112,7 @@ $(document).ready(function()
             var send_checked=window.date_checked+window.time_checked;
             if(send_checked==3)
             {
-                var API="http://140.125.217.135:1880/check_time";
+                var API="http://127.0.0.1:1880/check_time";
                 $.post
                 (
                     API,
@@ -140,7 +140,7 @@ $(document).ready(function()
                         {
                             if(confirm("確定借閱?"))
                             {
-                                var API="http://140.125.217.135:1880/lend";
+                                var API="http://127.0.0.1:1880/lend";
                                 $.post
                                 (
                                 API,

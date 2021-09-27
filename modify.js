@@ -1,7 +1,7 @@
 $(document).ready(function()
     {
         //初始化
-        var API="http://140.125.217.135:1880/information"
+        var API="http://127.0.0.1:1880/information"
         $.post
         (
             API,
@@ -52,7 +52,7 @@ $(document).ready(function()
             {
                 if(confirm("確定變更個人資料?"))
                 {
-                    var API = "http://140.125.217.135:1880/modify";
+                    var API = "http://127.0.0.1:1880/modify";
                     console.log(stdid);
                     $.post
                     (
@@ -69,7 +69,7 @@ $(document).ready(function()
                         if(inf==1)
                         {
                             alert("成功修改個人資料!");
-                            window.location.href="http://140.125.217.135:1880/web/information";
+                            window.location.href="http://127.0.0.1:1880/web/information";
                         }    
                     })
                 }
@@ -79,16 +79,16 @@ $(document).ready(function()
         //取消修改
         $("#no").click(function()
         {
-            window.location.href="http://140.125.217.135:1880/web/information";
+            window.location.href="http://127.0.0.1:1880/web/information";
         })
 
         //登出
         $("#signout").click(function()
         {   
-            var API = "http://140.125.217.135:1880/delete_uid";
+            var API = "http://127.0.0.1:1880/delete_uid";
             $.get
                 (API);
-            window.location.href="http://140.125.217.135:1880/web/signin"
+            window.location.href="http://127.0.0.1:1880/web/signin"
         })
     }
 )

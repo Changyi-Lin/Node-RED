@@ -4,7 +4,7 @@ $(
         $("#check").click(function()
         {   
             var authentication= $("#authentication").val();  
-            var API = "http://140.125.217.135:1880/authentication";
+            var API = "http://127.0.0.1:1880/authentication";
             console.log(authentication);
             if(authentication)
             {

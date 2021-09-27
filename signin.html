@@ -7,176 +7,177 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Poppins', sans-serif;
-            }
-            .main{
-                width: 500px;
-                height: 420px;
-                margin-top: 120px;
-                margin-left: auto;
-                margin-right: auto;
-                background-color: white;
-                border-radius: 10px;
-            }
-            h5{
-                color: black;
-                font-size: 40px;
-                font-weight: 700;
-                text-align: center;
-                background-color: white;
-                padding-top: 20px;
-                border-radius: 10px;
-            }
-            form{
-                width: 50%;
-                text-align: center;
-                margin: auto;
-                background-color: white;
-            }
-            div form div{
-                margin-bottom: 20px;
-            }
-            div form div label{
-                display: block;
-                color: black;
-                font-size: 22px;
-                font-weight: 550;
-                text-align: left;
-                }
-            .form{
-                display: block;
-                width: 100%;
-                margin: 5px 0px 5px 0%;
-                padding: .375rem .75rem;
-                font-size: 1rem;
-                font-weight: 400;
-                line-height: 1.5;
-                color: #212529;
-                background-color: rgb(253, 253, 253);
-                background-clip: padding-box;
-                border: 2px solid #bdbdbd;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                border-radius: 5px;
-                text-align: left;
-            }
-            .form_alart{
-                display: block;
-                width: 100%;
-                margin: 5px 0px 5px 0%;
-                padding: .375rem .75rem;
-                font-size: 1rem;
-                font-weight: 400;
-                line-height: 1.5;
-                color: #212529;
-                background-color: rgb(253, 234, 234);
-                background-clip: padding-box;
-                border: 2px solid #ff3c3c;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                border-radius: 5px;
-                text-align: left;
-            }       
-            .nothing{
-                display: none;
-            }
-            .alarm{
-                color: rgb(255, 0, 0);
-                margin-left: 25px;
-                font-size: 16px;
-                font-weight: 500;
-                text-align: left;
-            }
-            .btn{
-                width: 80%;
-                margin: auto;
-                text-align: center;
-                border-bottom: rgb(182, 182, 182) 2px solid;
-            }
-            button{
-                display: block;
-                width: 60%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 10px;
-                padding: .375rem .75rem;
-                font-size: 1rem;
-                font-weight: 500;
-                line-height: 1.5;
-                color: #212529;
-                background-color: #d8d8d8;
-                background-clip: padding-box;
-                border: 2px solid #c5c5c5;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                border-radius: 10px;
-                text-align: center;
-                transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
-            }
-            button:hover{
-                background-color: #c9c9c9;
-                border: 2px solid #c9c9c9;
-            }
-            .areg{
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 5px;
-                text-align: center;
-            }
-            h6{
-                display: inline;
-                color: rgb(110, 110, 110);
-                font-size: 16px;
-                font-weight: 600;
-            }
-            a{
-              display: inline;
-              color: rgb(68, 177, 240);
-              font-weight: 600;
-            }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.main{
+  width: 500px;
+  height: 420px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+h5{
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  background-color: white;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+form{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  background-color: white;
+}
+div form div{
+  margin-bottom: 20px;
+}
+div form div label{
+  display: block;
+  color: black;
+  font-size: 22px;
+  font-weight: 550;
+  text-align: left;
+}
+.form{
+  display: block;
+  width: 100%;
+  margin: 5px 0px 5px 0%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: rgb(253, 253, 253);
+  background-clip: padding-box;
+  border: 2px solid #bdbdbd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  text-align: left;
+}
+.form_alart{
+  display: block;
+  width: 100%;
+  margin: 5px 0px 5px 0%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: rgb(253, 234, 234);
+  background-clip: padding-box;
+  border: 2px solid #ff3c3c;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  text-align: left;
+}
+.nothing{
+  display: none;
+}
+.alarm{
+  color: rgb(255, 0, 0);
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+.btn{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border-bottom: rgb(182, 182, 182) 2px solid;
+}
+button{
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #d8d8d8;
+  background-clip: padding-box;
+  border: 2px solid #c5c5c5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  text-align: center;
+  transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
+}
+button:hover{
+  background-color: #c9c9c9;
+  border: 2px solid #c9c9c9;
+}
+.areg{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  text-align: center;
+}
+h6{
+  display: inline;
+  color: rgb(110, 110, 110);
+  font-size: 16px;
+  font-weight: 600;
+}
+a{
+  display: inline;
+  color: rgb(68, 177, 240);
+  font-weight: 600;
+}
 
-            @media (max-width:430px) {
-              .main{
-                width: 350px;
-              }
-            }
+@media (max-width:430px) {
+  .main{
+    width: 350px;
+  }
+}
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
-        <body style="background-color: #212529;">
-            <div class="main">
-                <label><h5>教室借閱系統登入</h5></label>
-                <form>
-                    <div>
-                        <label for="std_id">帳號 :</label>
-                        <input class="form" id="std_id" placeholder="帳號">
-                        <div id="stdid_alarm" class="nothing">請輸入帳號</div>
-                    </div>
-                    <div>
-                        <label for="password">密碼 :</label>
-                        <input class="form" id="password" placeholder="密碼">
-                        <div id="password_alarm" class="nothing">請輸入密碼</div>
-                    </div>
-                </form>
-                <div class="btn">
-                    <button id="signin" type="button"><b>登入</b></button>
+    </head>
+    <body style="background-color: #212529;">
+        <div class="main">
+            <label><h5>教室借閱系統登入</h5></label>
+            <form>
+                <div>
+                    <label for="std_id">帳號 :</label>
+                    <input class="form" id="std_id" placeholder="帳號">
+                    <div id="stdid_alarm" class="nothing">請輸入帳號</div>
                 </div>
-                <div class="areg">
-                    <label><h6>尚未註冊嗎?</h6></label>
-                    <a href="http://140.125.217.135:1880/web/register">立即註冊</a>
+                <div>
+                    <label for="password">密碼 :</label>
+                    <input class="form" id="password" placeholder="密碼">
+                    <div id="password_alarm" class="nothing">請輸入密碼</div>
                 </div>
+            </form>
+            <div class="btn">
+                <button id="signin" type="button"><b>登入</b></button>
             </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-            <script  language="JavaScript" type="text/javascript" src="http://140.125.217.135:1880/web/signin/json"></script>
-            <script  language="JavaScript" type="text/javascript" src="http://140.125.217.135:1880/web/signin/check_uid"></script>
-        </body>
+            <div class="areg">
+                <label><h6>尚未註冊嗎?</h6></label>
+                <a href="http://127.0.0.1:1880/web/register">立即註冊</a>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/signin/js"></script>
+    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/signin/check_uid"></script>
+
+    </body>
 </html>

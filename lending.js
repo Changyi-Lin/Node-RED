@@ -2,7 +2,7 @@ $(document).ready(function()
     {
         //初始化
         $("#table1").hide();
-        var API="http://140.125.217.135:1880/lending";
+        var API="http://127.0.0.1:1880/lending";
         $.post
         (
             API,
@@ -50,7 +50,7 @@ $(document).ready(function()
         $("button").click(function() 
         {
             //檢查逾時
-            var API = "http://140.125.217.135:1880/web/check_uid"
+            var API = "http://127.0.0.1:1880/web/check_uid"
             $.get
             (
                 API
@@ -64,7 +64,7 @@ $(document).ready(function()
                 {
                     if(confirm("確定取消此預約嗎?"))
                     {
-                        API="http://140.125.217.135:1880/web/delete_lending";
+                        API="http://127.0.0.1:1880/web/delete_lending";
                         $.post
                         (
                         API,
@@ -90,10 +90,10 @@ $(document).ready(function()
         //登出
         $("#signout").click(function()
         {   
-            var API = "http://140.125.217.135:1880/delete_uid";
+            var API = "http://127.0.0.1:1880/delete_uid";
             $.get
                 (API);
-            window.location.href="http://140.125.217.135:1880/web/signin"
+            window.location.href="http://127.0.0.1:1880/web/signin"
         })
     }
 )

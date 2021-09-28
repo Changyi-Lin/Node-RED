@@ -13,7 +13,7 @@ $(document).ready(function()
         { 
             today_month='0'+today_month; 
         } 
-        window.today = today_year+"-"+today_month+"-"+(today_day-2);
+        window.today = today_year+"-"+today_month+"-"+(today_day);
         document.getElementById("selectdate").setAttribute("min", window.today); 
         //初始化
         window.date_checked=0;

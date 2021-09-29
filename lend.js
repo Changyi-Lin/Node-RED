@@ -138,7 +138,7 @@ $(document).ready(function()
                         }
                         if(window.alarm==0)
                         {
-                            if(confirm("確定借閱?"))
+                            if(confirm("確定預約?"))
                             {
                                 var API="http://127.0.0.1:1880/lend";
                                 $.post
@@ -157,12 +157,12 @@ $(document).ready(function()
                                     if(ok=="OK")
                                     {
                                         var lendtimes=res.Lendtimes+1;
-                                        alert("借閱成功! \n您目前已借閱"+lendtimes+"筆。");
+                                        alert("預約成功! \n您目前已預約"+lendtimes+"筆。");
                                         document.location.reload();
                                     }
                                     else if(ok=="OVER")
                                     {
-                                        alert("您已達借閱次數上限(5筆)");
+                                        alert("您已達預約次數上限(5筆)");
                                         document.location.reload();
                                     }
                                 });
@@ -170,7 +170,7 @@ $(document).ready(function()
                         }
                         else 
                         {
-                            alert("有時段已被借閱。") ;
+                            alert("有時段已被預約。") ;
                             document.location.reload();
                         }
                     });

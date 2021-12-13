@@ -7,201 +7,212 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <style>
           @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-#topic{
-  font-size: 40px;
-  font-weight: 400;
-  padding-left: 50px;
-  padding-top: 50px;
-}
-#user_name{
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  padding-right: 15px;
-}
-nav{
-  height: 80px;
-  background-color:#212529;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 50px 0px 50px;
-}
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          /* ----- Nav Bar ----- */
+          #topic{
+            font-size: 40px;
+            font-weight: 400;
+            padding-left: 50px;
+            padding-top: 50px;
+          }
+          #user_name{
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding-right: 15px;
+          }
+          nav{
+            height: 80px;
+            background-color:#212529;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 50px 0px 50px;
+          }
+          nav .logo{
+            font-size: 40px;
+            color: rgba(196, 95, 0, 0.993);
+            font-weight: 600;
+          }
+          nav ul{
+            display: flex;
+            list-style: none;
+          }
+          nav ul li,nav ul label{
+            margin: 0 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+          }
+          nav ul li a,nav ul li label{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            border-radius: 5px;
+          }
+          nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
+            background-color:white;
+            color: #212529;
+            font-size: 18px;
+            font-weight: 500;
+          }
+          nav .menu-btn i{
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+          }
+          #click{
+            display: none;
+          }
+          
+          /* ----- Main Part ----- */
+          .main{
+            width: 60%;
+            height: 550px;
+            margin:auto;
+            padding:30px 5px 0px 5px;
+            text-align: center;
+          }
+          div label h5{
+            color: black;
+            font-size: 28px;
+            font-weight: 700;
+          }
+          table{
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 560px;
+            margin:  25px auto auto auto;
+            text-align: center;
+            border:  2px solid rgb(112, 112, 112);
+            border-radius: 15px;
+          }
+          .content_text, .info_text{
+            text-align: center;
+            height: 50px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px 0px 0px 25px;
+            border-bottom: 2px solid rgb(112, 112, 112);
+          }
+          .content_text_end, .info_text_end{
+            text-align: center;
+            height: 50px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px 0px 0px 25px;
+          }
+          #btnp{
+            margin-top: 25px;
+            width: 100%;
+            text-align: center;
+          }
+          #modify{
+            display: block;
+            width: 160px;
+            margin:auto;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #e9e9e9;
+            background-clip: padding-box;
+            border: 2px solid #dfdfdf;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 20px;
+            text-align: center;
+            transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
+          }
+          #modify:hover{
+            background-color: #c9c9c9;
+            border: 2px solid #c9c9c9;
+          }
 
-nav .logo{
-  font-size: 40px;
-  color: rgba(196, 95, 0, 0.993);
-  font-weight: 600;
-}
-nav ul{
-  display: flex;
-  list-style: none;
-}
-nav ul li,nav ul label{
-  margin: 0 10px;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-}
-nav ul li a,nav ul li label{
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-  background-color:white;
-  color: #212529;
-  font-size: 18px;
-  font-weight: 500;
-}
-nav .menu-btn i{
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-#click{
-  display: none;
-}
-/* 以上是menu設定
-以下是預約中設定 */
-.main{
-  width: 60%;
-  height: 550px;
-  margin:auto;
-  padding:30px 5px 0px 5px;
-  text-align: center;
-}
-div label h5{
-  color: black;
-  font-size: 28px;
-  font-weight: 700;
-}
-table{
-  overflow-x: auto;
-  white-space: nowrap;
-  width: 560px;
-  height: 390px;
-  margin: auto;
-  color: #212529;
-  text-align: center;
-}
-th,td{
-  font-size: 20px;
-  font-weight: 600;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 2rem;
-}
-#btnp{
-  margin-top: 10px;
-  width: 100%;
-  text-align: center;
-}
-#modify{
-  display: block;
-  width: 160px;
-  margin:auto;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #e9e9e9;
-  background-clip: padding-box;
-  border: 2px solid #dfdfdf;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 20px;
-  text-align: center;
-  transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
-  
-}
-#modify:hover{
-  background-color: #c9c9c9;
-  border: 2px solid #c9c9c9;
-}
-
-@media (max-width:1090px) {
-  #user_name{
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    padding-right: 0;
-  }
-  nav{
-    height: 80px;
-    background-color: #212529;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 30px 0px 30px;
-  }
-  nav .menu-btn i{
-    display: block;
-  }
-  #click:checked ~ .menu-btn i::before{
-    content: "\f00d";
-  }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background-color: #111;
-    height: 100vh;
-    width: 100%;
-    display: block;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul{
-    left: 0%;
-  }
-  nav ul li,nav ul label{
-    margin: 40px 0;
-    color: white;
-    font-size: 22px;
-  }
-  nav ul li a,nav ul li label,#user_name{
-    font-size: 22px;
-    display: block;
-  }
-  nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-    background-color: #111;
-    color: rgba(196, 95, 0, 0.993);
-    font-size: 22px;
-  }
-}
-@media (max-width:660px){
-  .main{
-    width: auto;
-  }
-  table{
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    height: 350px;
-  }
-  th,td{
-  font-size: 15px;
-  font-weight: 600;
-  border-bottom: 1px solid #ddd;
-  
-}
-}
+          @media (max-width:1090px) {
+            #user_name{
+              color: white;
+              font-size: 18px;
+              font-weight: 500;
+              padding-right: 0;
+            }
+            nav{
+              height: 80px;
+              background-color: #212529;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0px 30px 0px 30px;
+            }
+            nav .menu-btn i{
+              display: block;
+            }
+            #click:checked ~ .menu-btn i::before{
+              content: "\f00d";
+            }
+            nav ul{
+              position: fixed;
+              top: 80px;
+              left: -100%;
+              background-color: #111;
+              height: 100vh;
+              width: 100%;
+              display: block;
+              text-align: center;
+              transition: all 0.3s ease;
+            }
+            #click:checked ~ ul{
+              left: 0%;
+            }
+            nav ul li,nav ul label{
+              margin: 40px 0;
+              color: white;
+              font-size: 22px;
+            }
+            nav ul li a,nav ul li label,#user_name{
+              font-size: 22px;
+              display: block;
+            }
+            nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
+              background-color: #111;
+              color: rgba(196, 95, 0, 0.993);
+              font-size: 22px;
+            }
+          }
+          @media (max-width:960px){
+            .main{
+              width: auto;
+            }
+            table{
+              width: 60%;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+          @media (max-width:660px){
+            .main{
+              width: auto;
+            }
+            table{
+              display: block;
+              overflow-x: auto;
+              width: 360px;
+              white-space: nowrap;
+              height: auto;
+            }
+          }
       </style>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -226,23 +237,23 @@ th,td{
         <table>
             <tbody>
               <tr>
-                <th scope="row">姓名</th>
-                <td id="name" value="#"></td>
+                <th scope="row" class="content_text">姓名</th>
+                <td id="name" class="info_text"></td>
               <tr>
-                <th scope="row">學號</th>
-                <td id="stdid"></td>
+                <th scope="row" class="content_text">學號</th>
+                <td id="stdid" class="info_text"></td>
               </tr>
               <tr>
-                <th scope="row">密碼</th>
-                <td id="password"></td>
+                <th scope="row" class="content_text">密碼</th>
+                <td id="password" class="info_text"></td>
               </tr>
               <tr>
-                <th scope="row">電話</th>
-                <td id="phone" ></td>
+                <th scope="row" class="content_text">電話</th>
+                <td id="phone" class="info_text"></td>
               </tr>
               <tr>
-                <th scope="row">信箱</th>
-                <td id="email" ></td>
+                <th scope="row" class="content_text_end">信箱</th>
+                <td id="email" class="info_text_end"></td>
               </tr>
             </tbody>
         </table>

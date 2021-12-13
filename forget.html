@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -45,10 +45,10 @@
             font-weight: 600;
         }
 
-        /* -----Main Part----- */
+        /* ----- Main Part ----- */
         .main{
             width: 500px;
-            height: 420px;
+            height: 380px;
             margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
@@ -56,7 +56,7 @@
             border-radius: 10px;
             border: 2px solid rgb(112, 112, 112);
         }
-        .signin_text{
+        .find_text{
             color: black;
             font-size: 40px;
             font-weight: 700;
@@ -69,7 +69,7 @@
             margin: 25px auto auto auto;
             background-color: white;
         }
-        .signin_content{
+        .find_content{
           margin-bottom: 20px;
         }
         div form div label{
@@ -133,7 +133,7 @@
         }
         button{
           display: block;
-          width: 60%;
+          width: 40%;
           margin-left: auto;
           margin-right: auto;
           margin-bottom: 10px;
@@ -157,29 +157,6 @@
           background-color: #c9c9c9;
           border: 2px solid #c9c9c9;
         }
-        .areg, .forget{
-          width: 80%;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 10px;
-          text-align: center;
-        }
-        .notyet{
-          display: inline;
-          color: rgb(110, 110, 110);
-          font-size: 16px;
-          font-weight: 600;
-        }
-        a{
-          display: inline;
-          color: rgb(68, 177, 240);
-          font-weight: 600;
-          cursor: pointer;
-        }
-        a:hover{
-            color: rgb(27, 103, 146);
-        }
-
         @media (max-width: 430px){
           .home{
             width: 100%;
@@ -192,13 +169,14 @@
           }
           .main{
             width: 80%;
-            height: 430px;
+            height: auto;
           }  
         }
     </style>
-    <title>登入-工廠借用系統</title>
+    <title>忘記密碼-工廠借用系統</title>
 </head>
-<body style="background-color: #ffffff;">
+
+<body>
     <!-----Home Section----->
     <section class="home" id="home"></section>
     <section class="home-content" id="home-content">
@@ -211,31 +189,26 @@
 
     <!-----Main Project----->
     <div class="main">
-        <div class="signin_text">登入</div>
+        <div class="find_text">找回密碼</div>
         <form>
-            <div class="signin_content">
-                <label for="std_id">帳號 :</label>
-                <input class="form" id="std_id" placeholder="帳號">
+            <div class="find_content">
+                <label for="stdid" class="content_text">帳號</label>
+                <input class="form" id="stdid" placeholder="帳號(學號)">
                 <div id="stdid_alarm" class="nothing">請輸入帳號</div>
             </div>
-            <div class="signin_content">
-                <label for="password">密碼 :</label>
-                <input class="form" id="password" type="password" placeholder="密碼" onKeyPress="IsEnterKeyPress()">
-                <div id="password_alarm" class="nothing">請輸入密碼</div>
+            <div class="find_content">
+                <label for="email" class="content_text">原註冊信箱</label>
+                <input class="form" id="email" placeholder="原註冊信箱" onKeyPress="IsEnterKeyPress()">
+                <div id="email_alarm" class="nothing">請輸入原註冊信箱</div>
             </div>
         </form>
         <div class="btn">
-            <button id="signin" type="button"><b>登入</b></button>
+            <button id="input" type="button">傳送</button>
         </div>
-        <div class="areg">
-            <label class="notyet">尚未註冊嗎?</label>
-            <a href="http://127.0.0.1:1880/web/register">立即註冊</a>
-        </div>
-        <div class="forget"><a href="http://127.0.0.1:1880/web/forget">忘記密碼?</a></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/signin/js"></script>
-    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/signin/check_uid"></script>
+    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/forget/json"></script>
 </body>
+
 </html>

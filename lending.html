@@ -7,214 +7,192 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-#topic{
-  font-size: 40px;
-  font-weight: 400;
-  padding-left: 50px;
-  padding-top: 50px;
-}
-#user_name{
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  padding-right: 15px;
-}
-nav{
-  height: 80px;
-  background-color:#212529;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 50px 0px 50px;
-}
+            *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            /* ----- Nav Bar ----- */
+            #topic{
+              font-size: 40px;
+              font-weight: 400;
+              padding-left: 50px;
+              padding-top: 50px;
+            }
+            #user_name{
+              color: white;
+              font-size: 18px;
+              font-weight: 500;
+              padding-right: 15px;
+            }
+            nav{
+              height: 80px;
+              background-color:#212529;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0px 50px 0px 50px;
+            }
+            nav .logo{
+              font-size: 40px;
+              color: rgba(196, 95, 0, 0.993);
+              font-weight: 600;
+            }
+            nav ul{
+              display: flex;
+              list-style: none;
+            }
+            nav ul li,nav ul label{
+              margin: 0 10px;
+              color: white;
+              font-size: 18px;
+              font-weight: 500;
+            }
+            nav ul li a,nav ul li label{
+              color: white;
+              text-decoration: none;
+              font-size: 18px;
+              font-weight: 500;
+              letter-spacing: 1px;
+              padding: 8px 15px;
+              border-radius: 5px;
+            }
+            nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
+              background-color:white;
+              color: #212529;
+              font-size: 18px;
+              font-weight: 500;
+            }
+            nav .menu-btn i{
+              color: white;
+              font-size: 32px;
+              cursor: pointer;
+              display: none;
+            }
+            #click{
+              display: none;
+            }
 
-nav .logo{
-  font-size: 40px;
-  color: rgba(196, 95, 0, 0.993);
-  font-weight: 600;
-}
-nav ul{
-  display: flex;
-  list-style: none;
-}
-nav ul li,nav ul label{
-  margin: 0 10px;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-}
-nav ul li a,nav ul li label{
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-  background-color:white;
-  color: #212529;
-  font-size: 18px;
-  font-weight: 500;
-}
-nav .menu-btn i{
-  color: white;
-  font-size: 32px;
-  cursor: pointer;
-  display: none;
-}
-#click{
-  display: none;
-}
-/* 以上是menu設定
-以下是預約中設定 */
-.main{
-  width: 50%;
-  margin:3% 0px 0px 5%;
-}
-div label h5{
-  color: black;
-  font-size: 26px;
-  font-weight: 700;
-}
-table{
-  /* display: block; */
-  overflow-x: auto;
-  white-space: nowrap;
-  width: 600px;
-  height: 100%;
-  margin: 15px 0px 0px 0%;
-  color: #212529;
-  text-align: center;
-  box-shadow: 0 5px 10px #e2e2e2 ;
-}
-thead{
-  box-shadow: 0 5px 10px #eeeeee ;
-}
-thead tr th{
-  font-size: 22px;
-  font-weight: 600;
-}
-tbody{
-  border-bottom:1px rgb(170, 170, 170) solid;
-}
-th{
-  padding: 1rem 2rem;
-  letter-spacing: 0.1rem;
-  font-size: 22px;
-  font-weight: 300;
-}
-td{
-  padding: 1rem 2rem;
-}
-div table tbody tr td button{
-  display: block;
-  width: 100px;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #e9e9e9;
-  background-clip: padding-box;
-  border: 2px solid #dfdfdf;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 20px;
-  text-align: center;
-  transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
-}
-div table tbody tr td button:hover{
-  background-color: #c9c9c9;
-  border: 2px solid #c9c9c9;
-}
+            /* ----- Main Part ----- */
+            .main{
+              margin: 30px 0px 0px 0px;
+            }
+            div label h5{
+              color: black;
+              font-size: 30px;
+              font-weight: 700;
+              margin-left: 5%;
+            }
+            .lend_table{
+              text-align: center;
+              margin: 25px 0px 0px 5%;
+              width: 60%;
+            }
+            .table{
+              width: 685px;
+              border:  2px solid rgb(112, 112, 112);
+              border-radius: 15px;
+              overflow-x: auto;
+              white-space: nowrap;
+            }
+            .table_text{
+              font-size: 18px;
+              padding: 5px 25px 5px 25px;
+              border-bottom: 2px solid rgb(112, 112, 112);
+            }
+            .content_text{
+              font-size: 18px;
+              height: 60px;
+            }
+            .cancel_button{
+              display: block;
+              width: 100px;
+              margin-left: 25px;
+              padding: .375rem .75rem;
+              font-size: 1rem;
+              font-weight: 500;
+              line-height: 1.5;
+              color: #212529;
+              background-color: #e9e9e9;
+              background-clip: padding-box;
+              border: 2px solid #dfdfdf;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              border-radius: 20px;
+              text-align: center;
+              transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
+            }
+            .cancel_button:hover{
+              background-color: #c9c9c9;
+              border: 2px solid #c9c9c9;
+            }
 
-@media (max-width:1090px) {
-  #user_name{
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    padding-right: 0;
-  }
-  nav{
-    height: 80px;
-    background-color: #212529;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 30px 0px 30px;
-  }
-  nav .menu-btn i{
-    display: block;
-  }
-  #click:checked ~ .menu-btn i::before{
-    content: "\f00d";
-  }
-  nav ul{
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background-color: #111;
-    height: 100vh;
-    width: 100%;
-    display: block;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul{
-    left: 0%;
-  }
-  nav ul li,nav ul label{
-    margin: 40px 0;
-    color: white;
-    font-size: 22px;
-  }
-  nav ul li a,nav ul li label,#user_name{
-    font-size: 22px;
-    display: block;
-  }
-  nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-    background-color: #111;
-    color: rgba(196, 95, 0, 0.993);
-    font-size: 22px;
-  }
-  /* 以上是menu設定
-以下是預約設定 */
-
-}
-@media (max-width:665px){
-  .main{
-    width: auto;
-    margin-top: 15px;
-    margin-right: 15px;
-  }
-  table{
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: auto;
-  }
-  thead tr th{
-    font-size: 15px;
-    font-weight: 600;
-  }
-  th,td{
-    font-size: 15px;
-    padding: 10px 12px;
-  }
-  div table tbody tr td button{
-    font-size: 12px;
-    width: 90px;
-}
-}
+            @media (max-width:1096px) {
+              /* ----- Nav Bar ----- */
+              #user_name{
+                color: white;
+                font-size: 18px;
+                font-weight: 500;
+                padding-right: 0;
+              }
+              nav{
+                height: 80px;
+                background-color: #212529;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px 30px 0px 30px;
+              }
+              nav .menu-btn i{
+                display: block;
+              }
+              #click:checked ~ .menu-btn i::before{
+                content: "\f00d";
+              }
+              nav ul{
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background-color: #111;
+                height: 100vh;
+                width: 100%;
+                display: block;
+                text-align: center;
+                transition: all 0.3s ease;
+              }
+              #click:checked ~ ul{
+                left: 0%;
+              }
+              nav ul li,nav ul label{
+                margin: 40px 0;
+                color: white;
+                font-size: 22px;
+              }
+              nav ul li a,nav ul li label,#user_name{
+                font-size: 22px;
+                display: block;
+              }
+              nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
+                background-color: #111;
+                color: rgba(196, 95, 0, 0.993);
+                font-size: 22px;
+              }
+            }
+            @media (max-width:665px){
+              .lend_table{
+                width: 90%;
+              }
+              .table{
+                width: 100%;
+                display:block;
+                overflow-x:scroll;
+                height: auto;
+              }
+              .cancel_button{
+                margin-left: 0px;
+              }
+            }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -235,58 +213,60 @@ div table tbody tr td button:hover{
             </ul>
         </nav>
         <div class="main">
-            <label><h5>預約中</h5></label>
+            <label><h5>預約中清單</h5></label>
             <label><h5 id="inf" >尚無預約資料</h5></label>
-            <table id="table1" class="table">
-                <thead id="t_title">
+            <div class="lend_table">
+              <table id="table1" class="table">
+                <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">預約日期</th>
-                        <th scope="col">預約時段</th>
-                        <th scope="col"></th>
+                        <th scope="col" class="table_text"></th>
+                        <th scope="col" class="table_text">預約日期</th>
+                        <th scope="col" class="table_text">預約時段</th>
+                        <th scope="col" class="table_text"></th>
                     </tr>
                 </thead>
                 <tbody id="tb1">
                     <tr>
-                        <th scope='row'>1</th>
-                        <td id="tb1_td1"></td>
-                        <td id="tb1_td2"></td>
-                        <td><button id="btn1" type='button'>取消預約</button></td>
+                        <th scope='row' class="content_text">1</th>
+                        <td id="tb1_td1" class="content_text"></td>
+                        <td id="tb1_td2" class="content_text"></td>
+                        <td class="content_btn"><button id="btn1" type='button' class="cancel_button">取消預約</button></td>
                     </tr>
                 </tbody>
                 <tbody id="tb2">
                     <tr>
-                        <th scope='row'>2</th>
-                        <td id="tb2_td1"></td>
-                        <td id="tb2_td2"></td>
-                        <td><button id="btn2" type='button' >取消預約</button></td>
+                        <th scope='row' class="content_text">2</th>
+                        <td id="tb2_td1" class="content_text"></td>
+                        <td id="tb2_td2" class="content_text"></td>
+                        <td class="content_btn"><button id="btn2" type='button' class="cancel_button">取消預約</button></td>
                     </tr>
                 </tbody>
                 <tbody id="tb3">
                     <tr>
-                        <th scope='row'>3</th>
-                        <td id="tb3_td1"></td>
-                        <td id="tb3_td2"></td>
-                        <td><button id="btn3" type='button' >取消預約</button></td>
+                        <th scope='row' class="content_text">3</th>
+                        <td id="tb3_td1" class="content_text"></td>
+                        <td id="tb3_td2" class="content_text"></td>
+                        <td class="content_btn"><button id="btn3" type='button' class="cancel_button">取消預約</button></td>
                     </tr>
                 </tbody>
                 <tbody id="tb4">
                     <tr>
-                        <th scope='row'>4</th>
-                        <td id="tb4_td1"></td>
-                        <td id="tb4_td2"></td>
-                        <td><button id="btn4" type='button' >取消預約</button></td>
+                        <th scope='row' class="content_text">4</th>
+                        <td id="tb4_td1" class="content_text"></td>
+                        <td id="tb4_td2" class="content_text"></td>
+                        <td class="content_btn"><button id="btn4" type='button' class="cancel_button">取消預約</button></td>
                     </tr>
                 </tbody>
                 <tbody id="tb5">
                     <tr>
-                        <th scope='row'>5</th>
-                        <td id="tb5_td1"></td>
-                        <td id="tb5_td2"></td>
-                        <td><button id="btn5" type='button' >取消預約</button></td>
+                        <th scope='row' class="content_text">5</th>
+                        <td id="tb5_td1" class="content_text"></td>
+                        <td id="tb5_td2" class="content_text"></td>
+                        <td class="content_btn"><button id="btn5" type='button' class="cancel_button">取消預約</button></td>
                     </tr>
                 </tbody>
-            </table>
+              </table>
+            </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>

@@ -1,270 +1,65 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>個人資料-工廠借用系統</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <style>
-          @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-          *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-          /* ----- Nav Bar ----- */
-          #topic{
-            font-size: 40px;
-            font-weight: 400;
-            padding-left: 50px;
-            padding-top: 50px;
-          }
-          #user_name{
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            padding-right: 15px;
-          }
-          nav{
-            height: 80px;
-            background-color:#212529;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0px 50px 0px 50px;
-          }
-          nav .logo{
-            font-size: 40px;
-            color: rgba(196, 95, 0, 0.993);
-            font-weight: 600;
-          }
-          nav ul{
-            display: flex;
-            list-style: none;
-          }
-          nav ul li,nav ul label{
-            margin: 0 10px;
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-          }
-          nav ul li a,nav ul li label{
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            padding: 8px 15px;
-            border-radius: 5px;
-          }
-          nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-            background-color:white;
-            color: #212529;
-            font-size: 18px;
-            font-weight: 500;
-          }
-          nav .menu-btn i{
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            display: none;
-          }
-          #click{
-            display: none;
-          }
-          
-          /* ----- Main Part ----- */
-          .main{
-            width: 60%;
-            height: 550px;
-            margin:auto;
-            padding:30px 5px 0px 5px;
-            text-align: center;
-          }
-          div label h5{
-            color: black;
-            font-size: 28px;
-            font-weight: 700;
-          }
-          table{
-            overflow-x: auto;
-            white-space: nowrap;
-            width: 560px;
-            margin:  25px auto auto auto;
-            text-align: center;
-            border:  2px solid rgb(112, 112, 112);
-            border-radius: 15px;
-          }
-          .content_text, .info_text{
-            text-align: center;
-            height: 50px;
-            font-size: 20px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 0px 0px 0px 25px;
-            border-bottom: 2px solid rgb(112, 112, 112);
-          }
-          .content_text_end, .info_text_end{
-            text-align: center;
-            height: 50px;
-            font-size: 20px;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 0px 0px 0px 25px;
-          }
-          #btnp{
-            margin-top: 25px;
-            width: 100%;
-            text-align: center;
-          }
-          #modify{
-            display: block;
-            width: 160px;
-            margin:auto;
-            padding: .375rem .75rem;
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.5;
-            color: #212529;
-            background-color: #e9e9e9;
-            background-clip: padding-box;
-            border: 2px solid #dfdfdf;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: 20px;
-            text-align: center;
-            transition: border-color .3s ease-in-out,box-shadow .3s ease-in-out;
-          }
-          #modify:hover{
-            background-color: #c9c9c9;
-            border: 2px solid #c9c9c9;
-          }
 
-          @media (max-width:1090px) {
-            #user_name{
-              color: white;
-              font-size: 18px;
-              font-weight: 500;
-              padding-right: 0;
-            }
-            nav{
-              height: 80px;
-              background-color: #212529;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 0px 30px 0px 30px;
-            }
-            nav .menu-btn i{
-              display: block;
-            }
-            #click:checked ~ .menu-btn i::before{
-              content: "\f00d";
-            }
-            nav ul{
-              position: fixed;
-              top: 80px;
-              left: -100%;
-              background-color: #111;
-              height: 100vh;
-              width: 100%;
-              display: block;
-              text-align: center;
-              transition: all 0.3s ease;
-            }
-            #click:checked ~ ul{
-              left: 0%;
-            }
-            nav ul li,nav ul label{
-              margin: 40px 0;
-              color: white;
-              font-size: 22px;
-            }
-            nav ul li a,nav ul li label,#user_name{
-              font-size: 22px;
-              display: block;
-            }
-            nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-              background-color: #111;
-              color: rgba(196, 95, 0, 0.993);
-              font-size: 22px;
-            }
-          }
-          @media (max-width:960px){
-            .main{
-              width: auto;
-            }
-            table{
-              width: 60%;
-              margin-left: auto;
-              margin-right: auto;
-            }
-          }
-          @media (max-width:660px){
-            .main{
-              width: auto;
-            }
-            table{
-              display: block;
-              overflow-x: auto;
-              width: 360px;
-              white-space: nowrap;
-              height: auto;
-            }
-          }
-      </style>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-   <body>
-      <nav>
-         <div class="logo">工廠借用系統</div>
-         <input type="checkbox" id="click">
-         <label for="click" class="menu-btn">
+<head>
+    <meta charset="utf-8">
+    <title>個人資料-工廠借用系統</title>
+    <link rel="stylesheet" href="information.css" />
+    <style></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">工廠借用系統</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
             <i class="fas fa-bars"></i>
          </label>
-         <ul>
+        <ul>
             <label id="user_name">林昌毅</label>
             <li><a href="http://127.0.0.1:1880/web/home">首頁</a></li>
             <li><a href="http://127.0.0.1:1880/web/lend">預約工廠</a></li>
             <li><a href="http://127.0.0.1:1880/web/lending">預約中</a></li>
             <li><a class="active" href="http://127.0.0.1:1880/web/information">個人資料</a></li>
             <li><label id="signout">登出</label></li>
-         </ul>
-      </nav>
-      <div class="main">
+        </ul>
+    </nav>
+    <div class="main">
         <label><h5>個人資料</h5></label>
         <table>
             <tbody>
-              <tr>
-                <th scope="row" class="content_text">姓名</th>
-                <td id="name" class="info_text"></td>
-              <tr>
-                <th scope="row" class="content_text">學號</th>
-                <td id="stdid" class="info_text"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="content_text">密碼</th>
-                <td id="password" class="info_text"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="content_text">電話</th>
-                <td id="phone" class="info_text"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="content_text_end">信箱</th>
-                <td id="email" class="info_text_end"></td>
-              </tr>
+                <tr>
+                    <th scope="row" class="content_text">姓名</th>
+                    <td id="name" class="info_text"></td>
+                    <tr>
+                        <th scope="row" class="content_text">學號</th>
+                        <td id="stdid" class="info_text"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="content_text">密碼</th>
+                        <td id="password" class="info_text"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="content_text">電話</th>
+                        <td id="phone" class="info_text"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="content_text_end">信箱</th>
+                        <td id="email" class="info_text_end"></td>
+                    </tr>
             </tbody>
         </table>
         <div id="btnp">
-            <button  id="modify" type="button">修改個人資料</button>
+            <button id="modify" type="button">修改個人資料</button>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/check_uid"></script>
-    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/information/js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/check_cookie"></script>
+    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/information/js"></script>
 
-      </body>
+</body>
+
 </html>

@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ----- Nav Bar ----- */
+
+nav {
+    height: 80px;
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+}
+
+#user_name {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 15px;
+}
+
+nav .logo {
+    font-size: 40px;
+    color: #C25E00;
+    font-weight: 600;
+}
+
+nav .menu-btn i {
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li,
+nav ul label {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav ul li a,
+nav ul li label {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: color .5s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li label:hover,
+nav ul li a.active {
+    background-color: white;
+    color: #212529;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color .5s ease-in-out;
+}
+
+
+/* ----- End Line ----- */
+
+
+/* ----- Main Part ----- */
+
+.main {
+    width: 30%;
+    margin-left: 5%;
+    padding: 50px 0px 0px 0px;
+    float: left;
+}
+
+.Info {
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.infoTable_content {
+    margin-top: 20px;
+}
+
+#infoTable {
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 10px;
+}
+
+.title_text {
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(112, 112, 112);
+    background-color: #d6d6d6;
+    padding: 2px 0px 2px 0px;
+}
+
+#information {
+    width: 280px;
+    border-top-left-radius: 8px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#infodate {
+    width: 100px;
+    border-top-right-radius: 8px;
+}
+
+#info1_td0,
+#info1_td1 {
+    border-bottom: 2px solid rgb(112, 112, 112);
+}
+
+#info1_td0,
+#info2_td0 {
+    padding: 10px 0px 10px 15px;
+}
+
+#info1_td1,
+#info2_td1 {
+    text-align: center;
+}
+
+div table tbody tr td a {
+    color: rgb(51, 88, 255);
+}
+
+div table tbody tr td a:hover {
+    color: rgb(112, 112, 112);
+}
+
+.ToSwitch {
+    margin-top: 50px;
+}
+
+div #ToSwitchButton {
+    width: 180px;
+    height: 80px;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #d6d6d6;
+    border: none;
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+    font-weight: 400;
+}
+
+div #ToSwitchButton:disabled+:hover {
+    background-color: #ff5f15;
+    border: 2px solid #ff5f15;
+}
+
+.calander {
+    margin: 50px 0px 0px 5%;
+    float: left;
+    height: auto;
+    width: 55%;
+}
+
+.intro {
+    width: 435px;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 15px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.intro_O,
+.intro_X,
+.intro_L,
+.intro_U {
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 2px 2px 2px 2px;
+}
+
+.intro_O {
+    background-color: #3fc28b;
+}
+
+.intro_X {
+    background-color: #707070;
+}
+
+.intro_L {
+    background-color: #ff792c;
+}
+
+.intro_U {
+    background-color: #2282ff;
+}
+
+.calander_text {
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px 0px 15px 5px;
+}
+
+.calander_table {
+    width: 100%;
+    height: 400px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 15px;
+}
+
+#Day0 {
+    border-top-left-radius: 10px;
+}
+
+#Day7 {
+    border-top-right-radius: 10px;
+}
+
+.Day_text {
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(112, 112, 112);
+    background-color: #d6d6d6;
+    padding: 3px 0px 3px 0px;
+}
+
+.calander_td,
+.calander_time_td,
+.calander_time_td_end,
+.calander_td_end {
+    text-align: center;
+}
+
+.calander_time {
+    font-size: 18px;
+}
+
+.calander_time_td {
+    width: 130px;
+}
+
+.calander_time_td,
+.calander_td {
+    border-bottom: 2px solid rgb(112, 112, 112);
+}
+
+.status_O {
+    background-color: #3fc28b;
+    padding: 3px 8px 3px 8px;
+    border-radius: 100%;
+    font-weight: 1000;
+}
+
+.status_X {
+    background-color: #707070;
+    padding: 3px 8px 3px 8px;
+    border-radius: 100%;
+    font-weight: 1000;
+}
+
+.status_L {
+    background-color: #ff792c;
+    padding: 3px 8px 3px 8px;
+    border-radius: 100%;
+    font-weight: 1000;
+}
+
+.status_U {
+    background-color: #2282ff;
+    padding: 3px 8px 3px 8px;
+    border-radius: 100%;
+    font-weight: 1000;
+}
+
+.selection {
+    margin: 10px;
+    float: right;
+}
+
+.selection_button {
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #d6d6d6;
+    border: 2px solid #d6d6d6;
+    padding: .375rem .75rem;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.selection_button:hover {
+    background-color: #9c9c9c;
+    border: 2px solid #9c9c9c;
+    ;
+}
+
+@media (max-width:1096px) {
+    /* ----- Nav Bar ----- */
+    #user_name {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding-right: 0;
+    }
+    nav {
+        height: 80px;
+        background-color: #212529;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px 0px 30px;
+    }
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked~.menu-btn i::before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked~ul {
+        left: 0%;
+    }
+    nav ul li,
+    nav ul label {
+        margin: 40px 0;
+        color: white;
+        font-size: 22px;
+    }
+    nav ul li a,
+    nav ul li label,
+    #user_name {
+        font-size: 22px;
+        display: block;
+    }
+    nav ul li a:hover,
+    nav ul li label:hover,
+    nav ul li a.active {
+        background-color: #111;
+        color: rgba(196, 95, 0, 0.993);
+        font-size: 22px;
+    }
+    /* ----- Main Part ----- */
+    .main {
+        width: 95%;
+        float: none;
+    }
+    #infoTable {
+        width: 90%;
+    }
+    .ToSwitch {
+        margin-top: 20px;
+    }
+    div #ToSwitchButton {
+        width: 150px;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+    .calander {
+        margin: 20px 0px 0px 5%;
+        height: auto;
+        width: 95%;
+    }
+    .calander_table {
+        width: 90%;
+    }
+    .selection {
+        float: none;
+    }
+}
+
+@media (max-width:430px) {
+    .calander_table {
+        display: block;
+        overflow-x: scroll;
+        height: auto;
+    }
+    .Day_text,
+    .calander_time_td,
+    .calander_time_td_end {
+        font-size: 12px;
+        padding: 5px 5px 5px 5px;
+    }
+    .Info,
+    .calander_text {
+        font-size: 25px;
+    }
+    .intro {
+        width: 335px;
+    }
+    .intro_O,
+    .intro_X,
+    .intro_L,
+    .intro_U {
+        font-size: 13px;
+        margin-left: 12px;
+    }
+}

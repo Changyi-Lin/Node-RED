@@ -4,33 +4,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>預約工廠-工廠借用系統</title>
+    <title>預約-工廠借閱管理者系統</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="lend.css" />
+    <link rel="stylesheet" href="admin_lend.css" />
     <style></style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <nav>
-        <div class="logo">工廠借用系統</div>
+        <div class="logo">工廠借用管理者系統</div>
         <input type="checkbox" id="click">
         <label for="click" class="menu-btn">
             <i class="fas fa-bars"></i>
          </label>
         <ul>
-            <label id="user_name">林昌毅</label>
-            <li><a href="http://127.0.0.1:1880/web/home">首頁</a></li>
-            <li><a class="active" href="http://127.0.0.1:1880/web/lend">預約工廠</a></li>
-            <li><a href="http://127.0.0.1:1880/web/lending">預約中</a></li>
-            <li><a href="http://127.0.0.1:1880/web/information">個人資料</a></li>
+            <label id="user_name">管理者</label>
             <li><label id="signout">登出</label></li>
         </ul>
     </nav>
     <div class="main">
-        <label><h5>預約日期</h5></label>
+        <div class="title">請輸入學號</div>
+        <input type="text" id="schoolnum" maxlength="9">
+        <div class="title">預約日期</div>
         <input type="date" id="selectdate" min="2021-5-24" placeholder="請選擇日期">
-        <label><h5>預約時段</h5></label>
+        <div class="title">預約時段</div>
         <form name="myform">
             <input type="checkbox" id="myCheck1" class="btn-check" autocomplete="off" name="mycheck" value="First">
             <label id="myCheck1_lb" for="myCheck1">AM 08:10-AM 09:00</label>
@@ -53,13 +51,12 @@
             <label id="myCheck8_lb" for="myCheck8">PM 04:10-PM 05:00</label>
             <br>
         </form>
-        <button id="btnset" class="btn btn-secondary" type="button"><b>確定預約</b></button>
+        <button id="btnset" class="btn btn-secondary" type="button"><b>確定借閱</b></button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/check_cookie"></script>
-    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/lend/js"></script>
-
+    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/admin/lend/js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/admin/check_cookie"></script>
 
 </body>
 

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+
+/* ----- Home Section ----- */
+
+.home {
+    display: flex;
+    background: url("https://github.com/Changyi-Lin/Reasearch/blob/master/School.jpg?raw=true") no-repeat center;
+    background-size: cover;
+    height: 150px;
+    color: #ffffff;
+    width: auto;
+    z-index: -100;
+    filter: brightness(50%);
+}
+
+.home-content {
+    display: flex;
+    position: absolute;
+    z-index: 50;
+    top: 35px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.home-content .max-size {
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+}
+
+.text {
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* -----Main Part----- */
+
+.main {
+    width: 500px;
+    height: 420px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 112, 112);
+}
+
+.signin_text {
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid rgb(112, 112, 112);
+}
+
+form {
+    width: 50%;
+    text-align: center;
+    margin: 25px auto auto auto;
+    background-color: white;
+}
+
+.signin_content {
+    margin-bottom: 20px;
+}
+
+div form div label {
+    display: block;
+    color: black;
+    font-size: 22px;
+    font-weight: 550;
+    text-align: left;
+}
+
+.form {
+    display: block;
+    width: 100%;
+    margin: 5px 0px 5px 0%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: rgb(253, 253, 253);
+    background-clip: padding-box;
+    border: 2px solid #bdbdbd;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.form_alart {
+    display: block;
+    width: 100%;
+    margin: 5px 0px 5px 0%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: rgb(253, 234, 234);
+    background-clip: padding-box;
+    border: 2px solid #ff3c3c;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.nothing {
+    display: none;
+}
+
+.alarm {
+    color: rgb(255, 0, 0);
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.btn {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-bottom: rgb(182, 182, 182) 2px solid;
+}
+
+button {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #212529;
+    cursor: pointer;
+    background-color: #d8d8d8;
+    background-clip: padding-box;
+    border: 2px solid #c5c5c5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+button:hover {
+    background-color: #c9c9c9;
+    border: 2px solid #c9c9c9;
+}
+
+.areg,
+.forget {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.notyet {
+    display: inline;
+    color: rgb(110, 110, 110);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+a {
+    display: inline;
+    color: rgb(68, 177, 240);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(27, 103, 146);
+}
+
+@media (max-width: 430px) {
+    .home {
+        width: 100%;
+    }
+    .text {
+        font-size: 30px;
+    }
+    .home-content {
+        top: 50px;
+    }
+    .main {
+        width: 80%;
+        height: 430px;
+    }
+}

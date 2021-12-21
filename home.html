@@ -1,536 +1,181 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <title>首頁-工廠借用系統</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        /* ----- Nav Bar ----- */
-        nav{
-            height: 80px;
-            background-color:#212529;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0px 50px 0px 50px;
-        }
-        #user_name{
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            padding-right: 15px;
-        }
-        nav .logo{
-            font-size: 40px;
-            color: #C25E00;
-            font-weight: 600;
-        }
-        nav .menu-btn i{
-            color: white;
-            font-size: 32px;
-            cursor: pointer;
-            display: none;
-        }
-        #click{
-            display: none;
-        }
-        nav ul{
-            display: flex;
-            list-style: none;
-        }
-        nav ul li,nav ul label{
-            margin: 0 10px;
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        nav ul li a,nav ul li label{
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: color .5s ease-in-out;
-        }
-        nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-            background-color:white;
-            color: #212529;
-            font-size: 18px;
-            font-weight: 500;
-            transition: color .5s ease-in-out;
-        }
-        /* ----- End Line ----- */
-        
-        /* ----- Main Part ----- */
-        .main{
-          width: 30%;
-          margin-left: 5%;
-          padding: 50px 0px 0px 0px;
-          float: left;
-        }
-        .Info{
-          color: black;
-          font-size: 30px;
-          font-weight: 700;
-          margin-left: 15px;
-        }
-        .infoTable_content{
-          margin-top: 20px;
-        }
-        #infoTable{
-          overflow-x: auto;
-          white-space: nowrap;
-          border:  2px solid rgb(112, 112, 112);
-          border-radius: 10px;
-        }
-        .title_text{
-          font-size: 18px;
-          font-weight: 600;
-          border-bottom: 2px solid rgb(112, 112, 112);
-          background-color: #d6d6d6;
-          padding: 2px 0px 2px 0px;
-        }
-        #information{
-          width: 280px;
-          border-top-left-radius: 8px;
-          text-align: left;
-          padding-left: 15px;
-        }
-        #infodate{
-          width: 100px;
-          border-top-right-radius: 8px;
-        }
-        #info1_td0, #info1_td1{
-          border-bottom: 2px solid rgb(112, 112, 112);
-        }
-        #info1_td0, #info2_td0{
-          padding: 10px 0px 10px 15px;
-        }
-        #info1_td1, #info2_td1{
-          text-align: center;
-        }
-        div table tbody tr td a{
-          color:rgb(51, 88, 255);
-        }
-        div table tbody tr td a:hover{
-          color:rgb(112, 112, 112);
-        }
-        .ToSwitch{
-          margin-top: 50px;
-        }
-        div #ToSwitchButton{
-            width: 180px;
-            height: 80px;
-            line-height: 1.5;
-            text-align: center;
-            text-decoration: none;
-            vertical-align: middle;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-            background-color: #d6d6d6;
-            border: 2px solid #d6d6d6;
-            padding: .375rem .75rem;
-            font-size: 1.5rem;
-            border-radius: 20px;
-            transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out,box-shadow .3s ease-in-out;
-            font-weight: 400;
-        }
-        div #ToSwitchButton:hover{
-            background-color: #ff7738;
-            border: 2px solid #e46428;
-        }
-        .calander{
-          margin: 50px 0px 0px 5%;
-          float: left;
-          height: auto;
-          width: 55%;
-        }
-        .intro{
-          width: 320px;
-          border:  2px solid rgb(112, 112, 112);
-          border-radius: 15px;
-          height: 40px;
-          margin-bottom: 10px;
-        }
-        .intro_O, .intro_X, .intro_L{
-          float: left;
-          margin-left: 20px;
-          margin-top: 5px;
-          border-radius: 5px;
-          padding: 2px 2px 2px 2px;
-        }
-        .intro_O{
-          background-color: #3fc28b;
-        }
-        .intro_X{
-          background-color: #e03535;
-        }
-        .intro_L{
-          background-color: #f77b34;
-        }
-        .calander_text{
-          color: black;
-          font-size: 30px;
-          font-weight: 700;
-          margin: 0px 0px 15px 5px;
-        }
-        .calander_table{
-          width: 100%;
-          height: 400px;
-          overflow-x: auto;
-          white-space: nowrap;
-          border:  2px solid rgb(112, 112, 112);
-          border-radius: 15px;
-        }
-        #Day0{
-          border-top-left-radius: 10px;
-        }
-        #Day7{
-          border-top-right-radius: 10px;
-        }
-        .Day_text{
-          text-align: center;
-          font-size: 18px;
-          border-bottom: 2px solid rgb(112, 112, 112);
-          background-color: #d6d6d6;
-          padding: 3px 0px 3px 0px;
-        }
-        .calander_td, .calander_time_td, .calander_time_td_end ,.calander_td_end{
-          text-align: center;
-        }
-        .calander_time{
-          font-size: 18px;
-        }
-        .calander_time_td{
-          width: 130px;
-        }
-        .calander_time_td, .calander_td{
-          border-bottom: 2px solid rgb(112, 112, 112);
-        }
-        .status_O{
-          background-color: #3fc28b;
-          padding: 3px 8px 3px 8px;
-          border-radius: 100%;
-          font-weight: 1000;
-        }
-        .status_X{
-          background-color: #e03535;
-          padding: 3px 8px 3px 8px;
-          border-radius: 100%;
-          font-weight: 1000;
-        }
-        .status_L{
-          background-color: #f77b34;
-          padding: 3px 8px 3px 8px;
-          border-radius: 100%;
-          font-weight: 1000;
-        }
-        .selection{
-          margin: 10px;
-          float: right;
-        }
-        .selection_button{
-          width: 70px;
-          height: 35px;
-          text-align: center;
-          text-decoration: none;
-          vertical-align: middle;
-          cursor: pointer;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-          background-color: #d6d6d6;
-          border: 2px solid #d6d6d6;
-          padding: .375rem .75rem;
-          font-size: 13px;
-          font-weight: 500;
-          border-radius: 5px;
-          transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out,box-shadow .3s ease-in-out;
-        }
-        .selection_button:hover{
-          background-color: #9c9c9c;
-          border: 2px solid #9c9c9c;;
-        }
-        
-        @media (max-width:1096px){
-          /* ----- Nav Bar ----- */
-          #user_name{
-              color: white;
-              font-size: 18px;
-              font-weight: 500;
-              padding-right: 0;
-          }
-          nav{
-              height: 80px;
-              background-color: #212529;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 0px 30px 0px 30px;
-          }
-          nav .menu-btn i{
-              display: block;
-          }
-          #click:checked ~ .menu-btn i::before{
-              content: "\f00d";
-          }
-          nav ul{
-              position: fixed;
-              top: 80px;
-              left: -100%;
-              background-color: #111;
-              height: 100vh;
-              width: 100%;
-              display: block;
-              text-align: center;
-              transition: all 0.3s ease;
-          }
-          #click:checked ~ ul{
-              left: 0%;
-          }
-          nav ul li,nav ul label{
-              margin: 40px 0;
-              color: white;
-              font-size: 22px;
-          }
-          nav ul li a,nav ul li label,#user_name{
-              font-size: 22px;
-              display: block;
-          }
-          nav ul li a:hover,nav ul li label:hover,nav ul li a.active{
-              background-color: #111;
-              color: rgba(196, 95, 0, 0.993);
-              font-size: 22px;
-          }
-
-          /* ----- Main Part ----- */
-          .main{
-            width: 95%;
-            float: none;
-          }
-          #infoTable{
-            width: 90%;
-          }
-          .ToSwitch{
-            margin-top: 20px;
-          }
-          div #ToSwitchButton{
-            width: 150px;
-            height: 40px;
-            font-size: 15px;
-            border-radius: 20px;
-          }
-          .calander{
-            margin: 20px 0px 0px 5%;
-            height: auto;
-            width: 95%;
-          }
-          .calander_table{
-            width: 90%;
-          }
-          .selection{
-            float: none;
-          }
-        }
-          
-        @media (max-width:430px){
-          .calander_table{
-            display:block;
-            overflow-x:scroll;
-            height: auto;
-          }
-          .Day_text,.calander_time_td, .calander_time_td_end{
-            font-size: 12px;
-            padding: 5px 5px 5px 5px;
-          }
-          .Info,.calander_text{
-            font-size: 25px;
-          }
-          .intro{
-            width: 240px;
-          }
-          .intro_O, .intro_X, .intro_L{
-            font-size: 13px;
-            margin-left: 12px;
-          }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="home.css" />
+    <style></style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <!----- Nav Bar ----->
     <nav>
-      <div class="logo">工廠借用系統</div>
-      <input type="checkbox" id="click">
-      <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
-      <ul>
-        <label id="user_name">林昌毅</label>
-        <li><a  class="active" href="http://127.0.0.1:1880/web/home">首頁</a></li>
-        <li><a href="http://127.0.0.1:1880/web/lend">預約工廠</a></li>
-        <li><a href="http://127.0.0.1:1880/web/lending" class="lending">預約中</a></li>
-        <li><a href="http://127.0.0.1:1880/web/information">個人資料</a></li>
-        <li><label id="signout">登出</label></li>
-      </ul>
+        <div class="logo">工廠借用系統</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <ul>
+            <label id="user_name">林昌毅</label>
+            <li><a class="active" href="http://127.0.0.1:1880/web/home">首頁</a></li>
+            <li><a href="http://127.0.0.1:1880/web/lend">預約工廠</a></li>
+            <li><a href="http://127.0.0.1:1880/web/lending" class="lending">預約中</a></li>
+            <li><a href="http://127.0.0.1:1880/web/information">個人資料</a></li>
+            <li><label id="signout">登出</label></li>
+        </ul>
     </nav>
 
     <!----- Main Part ----->
     <div>
-      <div class="main">
-        <label class="Info">公告欄</label>
-        <div class="infoTable_content">
-          <table id="infoTable" class="infoTable">
-            <thead>
-              <tr>
-                <th scope="col" id="information" class="title_text">公告事項</th>
-                <th scope="col" id="infodate" class="title_text">公告日期</th>
-              </tr>
-            </thead>
-            <tbody id="info1_content">
-              <tr>
-                <td id="info1_td0">
-                  <a href="https://drive.google.com/file/d/1ZfCgIzyvqdOiYsOlcZCk9_b2WvPAOnFg/view?usp=sharing" target="_blank">工廠借用系統使用規則</a>
-                </td>
-                <td id="info1_td1">2021/6/21</td>
-              </tr>
-            </tbody>
-            <tbody id="info2_content">
-              <tr>
-                <td id="info2_td0">
-                  <a href="https://forms.gle/ar8qxm1xT3gFZWtC9" target="_blank">使用意見回饋調查</a>
-                </td>
-                <td id="info2_td1">2021/6/21</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="main">
+            <label class="Info">公告欄</label>
+            <div class="infoTable_content">
+                <table id="infoTable" class="infoTable">
+                    <thead>
+                        <tr>
+                            <th scope="col" id="information" class="title_text">公告事項</th>
+                            <th scope="col" id="infodate" class="title_text">公告日期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="info1_content">
+                        <tr>
+                            <td id="info1_td0">
+                                <a href="https://drive.google.com/file/d/1ZfCgIzyvqdOiYsOlcZCk9_b2WvPAOnFg/view?usp=sharing" target="_blank">工廠借用系統使用規則</a>
+                            </td>
+                            <td id="info1_td1">2021/6/21</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="info2_content">
+                        <tr>
+                            <td id="info2_td0">
+                                <a href="https://forms.gle/ar8qxm1xT3gFZWtC9" target="_blank">使用意見回饋調查</a>
+                            </td>
+                            <td id="info2_td1">2021/6/21</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ToSwitch">
+                <button id="ToSwitchButton" type="button" disabled=true>非借用時段</button>
+            </div>
         </div>
-        <div class="ToSwitch">
-          <button id="ToSwitchButton" type="button">前往控制介面</button>
+        <div class="calander">
+            <div class="calander_text">借用情況表</div>
+            <div class="intro">
+                <div class="intro_O">O 可借用</div>
+                <div class="intro_X">X 不可借用</div>
+                <div class="intro_L">L 已被借用</div>
+                <div class="intro_U">U 使用者借用</div>
+            </div>
+            <table name="timetable" class="calander_table">
+                <thead>
+                    <tr>
+                        <th id="Day0" class="Day_text"></th>
+                        <th id="Day1" class="Day_text">Day1</th>
+                        <th id="Day2" class="Day_text">Day2</th>
+                        <th id="Day3" class="Day_text">Day3</th>
+                        <th id="Day4" class="Day_text">Day4</th>
+                        <th id="Day5" class="Day_text">Day5</th>
+                        <th id="Day6" class="Day_text">Day6</th>
+                        <th id="Day7" class="Day_text">Day7</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">08:10~09:00</label>
+                            <td class="calander_td"><label id="1-1" class="status_O">O</label></td>
+                            <td class="calander_td"><label id="1-2" class="status_O">O</label></td>
+                            <td class="calander_td"><label id="1-3" class="status_O">X</label></td>
+                            <td class="calander_td"><label id="1-4" class="status_O">O</label></td>
+                            <td class="calander_td"><label id="1-5" class="status_O">O</label></td>
+                            <td class="calander_td"><label id="1-6" class="status_O">O</label></td>
+                            <td class="calander_td"><label id="1-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">09:10~10:00</label></td>
+                        <td class="calander_td"><label id="2-1" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="2-2" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="2-3" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="2-4" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="2-5" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="2-6" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="2-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">10:10~11:00</label></td>
+                        <td class="calander_td"><label id="3-1" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="3-2" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="3-3" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="3-4" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="3-5" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="3-6" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="3-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">11:10~12:00</label></td>
+                        <td class="calander_td"><label id="4-1" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="4-2" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="4-3" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="4-4" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="4-5" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="4-6" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="4-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">13:10~14:00</label></td>
+                        <td class="calander_td"><label id="5-1" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="5-2" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="5-3" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="5-4" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="5-5" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="5-6" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="5-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">14:10~15:00</label></td>
+                        <td class="calander_td"><label id="6-1" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="6-2" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="6-3" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="6-4" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="6-5" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="6-6" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="6-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td"><label class="calander_time">15:10~16:00</label></td>
+                        <td class="calander_td"><label id="7-1" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="7-2" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="7-3" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="7-4" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="7-5" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="7-6" class="status_O">O</label></td>
+                        <td class="calander_td"><label id="7-7" class="status_O">O</label></td>
+                    </tr>
+                    <tr>
+                        <td class="calander_time_td_end"><label class="calander_time">16:10~17:00</label></td>
+                        <td class="calander_td_end"><label id="8-1" class="status_O">O</label></td>
+                        <td class="calander_td_end"><label id="8-2" class="status_O">O</label></td>
+                        <td class="calander_td_end"><label id="8-3" class="status_O">O</label></td>
+                        <td class="calander_td_end"><label id="8-4" class="status_O">O</label></td>
+                        <td class="calander_td_end"><label id="8-5" class="status_O">O</label></td>
+                        <td class="calander_td_end"><label id="8-6" class="status_O">O</label></td>
+                        <td class="calander_td_end"><label id="8-7" class="status_O">O</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="selection">
+                <button class="selection_button" id="previous" disabled=true>上一週</button>
+                <button class="selection_button" id="next">下一週</button>
+            </div>
         </div>
-      </div>
-      <div class="calander">
-        <div class="calander_text">借用情況表</div>
-        <div class="intro">
-          <div class="intro_O">O 可借用</div>
-          <div class="intro_X">X 不可借用</div>
-          <div class="intro_L">L 已被借用</div>
-        </div>
-        <table name="timetable" class="calander_table">
-          <thead>
-            <tr>
-              <th id="Day0" class="Day_text"></th>
-              <th id="Day1" class="Day_text">Day1</th>
-              <th id="Day2" class="Day_text">Day2</th>
-              <th id="Day3" class="Day_text">Day3</th>
-              <th id="Day4" class="Day_text">Day4</th>
-              <th id="Day5" class="Day_text">Day5</th>
-              <th id="Day6" class="Day_text">Day6</th>
-              <th id="Day7" class="Day_text">Day7</th>
-            </tr>  
-          </thead>
-          <tbody>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">08:10~09:00</label>
-                <td class="calander_td"><label id="1-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="1-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="1-3" class="status_O">X</label></td>
-                <td class="calander_td"><label id="1-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="1-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="1-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="1-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">09:10~10:00</label></td>
-                <td class="calander_td"><label id="2-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="2-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="2-3" class="status_O">O</label></td>
-                <td class="calander_td"><label id="2-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="2-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="2-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="2-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">10:10~11:00</label></td>
-                <td class="calander_td"><label id="3-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="3-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="3-3" class="status_O">O</label></td>
-                <td class="calander_td"><label id="3-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="3-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="3-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="3-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">11:10~12:00</label></td>
-                <td class="calander_td"><label id="4-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="4-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="4-3" class="status_O">O</label></td>
-                <td class="calander_td"><label id="4-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="4-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="4-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="4-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">13:10~14:00</label></td>
-                <td class="calander_td"><label id="5-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="5-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="5-3" class="status_O">O</label></td>
-                <td class="calander_td"><label id="5-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="5-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="5-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="5-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">14:10~15:00</label></td>
-                <td class="calander_td"><label id="6-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="6-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="6-3" class="status_O">O</label></td>
-                <td class="calander_td"><label id="6-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="6-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="6-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="6-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td"><label class="calander_time">15:10~16:00</label></td>
-                <td class="calander_td"><label id="7-1" class="status_O">O</label></td>
-                <td class="calander_td"><label id="7-2" class="status_O">O</label></td>
-                <td class="calander_td"><label id="7-3" class="status_O">O</label></td>
-                <td class="calander_td"><label id="7-4" class="status_O">O</label></td>
-                <td class="calander_td"><label id="7-5" class="status_O">O</label></td>
-                <td class="calander_td"><label id="7-6" class="status_O">O</label></td>
-                <td class="calander_td"><label id="7-7" class="status_O">O</label></td>
-              </tr>
-              <tr>
-                <td class="calander_time_td_end"><label class="calander_time">16:10~17:00</label></td>
-                <td class="calander_td_end"><label id="8-1" class="status_O">O</label></td>
-                <td class="calander_td_end"><label id="8-2" class="status_O">O</label></td>
-                <td class="calander_td_end"><label id="8-3" class="status_O">O</label></td>
-                <td class="calander_td_end"><label id="8-4" class="status_O">O</label></td>
-                <td class="calander_td_end"><label id="8-5" class="status_O">O</label></td>
-                <td class="calander_td_end"><label id="8-6" class="status_O">O</label></td>
-                <td class="calander_td_end"><label id="8-7" class="status_O">O</label></td>
-              </tr>
-              </tbody>
-        </table>
-        <div class="selection">
-          <button class="selection_button" id="previous" disabled=true >上一週</button>
-          <button class="selection_button" id="next">下一週</button>
-        </div>
-      </div>
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/check_uid"></script>
-    <script  language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/home/js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/check_cookie"></script>
+    <script language="JavaScript" type="text/javascript" src="http://127.0.0.1:1880/web/home/js"></script>
 </body>
+
 </html>
